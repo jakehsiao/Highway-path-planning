@@ -340,11 +340,11 @@ int main() {
 			int lane = car_lane; //init the target lane with the current car lane
 			int behaviour = choose_behaviour(car_lane, nearest_car_in_each_lane);
 			if (behaviour == 99){
-				ref_v -= 0.25; //TUNE: the slowdown value
+				ref_v -= 0.2; //TUNE: the slowdown value
 			}
 			else if (behaviour == 0){
 				if (ref_v < 49.5){ //TUNE: the ref v
-					ref_v += 0.25;
+					ref_v += 0.2;
 				}
 			}
 			else{
